@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Scribd Cleaner",
+  "version": "1.0",
+  "description": "Remove all elements on scribd.com except #document_container",
+  "content_scripts": [
+    {
+      "matches": ["*://*.scribd.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["scripting"]
+}
